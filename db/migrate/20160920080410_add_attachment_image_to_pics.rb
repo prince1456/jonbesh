@@ -8,4 +8,5 @@ class AddAttachmentImageToPics < ActiveRecord::Migration
   # def self.down
   #   remove_column :pics, :attachment
   # end
+  
 end

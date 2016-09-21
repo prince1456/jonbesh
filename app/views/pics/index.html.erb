@@ -1,0 +1,67 @@
+
+<br>
+
+<hr class="featurette-divider">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Pics</h1>
+<div class="row">
+    <% @pics.each do |pic| %>
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+               <a href="#" class="thumbnail">
+                <%= image_tag pic.image.url(:large) %>
+              </a>
+              <div class="caption">
+                <h3><%= pic.title %></h3>
+                <!-- <p>...</p> -->
+                <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
+                  <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+              </div>
+            </div>
+          </div>
+          <!-- <td><%= link_to 'Show', pic %></td>
+        <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
+        <td><%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+
+    <% end %>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading"> <%= link_to 'برای تغییر عکستان روی لینک زیر کلیک کنید', new_pic_path %></h2>
+          <p class="lead">برای تغییر عکس تان میتوانید روی لینک زیر کلیک کنید و بعد از ان عکستان را دان</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="assets/frameEn.png" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>

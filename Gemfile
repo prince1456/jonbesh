@@ -8,8 +8,6 @@ gem 'omniauth-twitter'
 gem 'simple_form'
 gem 'fog'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem 'sass-rails', '>= 3.2'
-
 gem 'frontend-generators'
 # gem 'paperclip_watermark'
 #

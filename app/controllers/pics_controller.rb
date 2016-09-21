@@ -1,5 +1,6 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
+    layout "layouts/new", only: [:new, :show]
 
   # GET /pics
   # GET /pics.json

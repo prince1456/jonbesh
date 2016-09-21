@@ -17,16 +17,56 @@
 
 
 
+/*form */
+.report-form{
+  direction: rtl;
+}
+
+.reports-in{
+  border-bottom: 1px solid;
+padding: 5px;
+border-top: 1px solid;
+background: rgba(255, 255, 255, 0.51)
+}
  /* GLOBAL STYLES
  -------------------------------------------------- */
  /* Padding below the footer and lighter body text */
-
+  .img-rounded{
+    width: 300px;
+    height: 300px
+  }
+ .navbar-inverse .navbar-brand {
+     color: #000;
+ }
+.navbar-center{
+  padding-right: 30%;
+  /*margin-left: auto;*/
+}
+.navbb{
+  padding-right: 150px;
+  padding-left: 150px;
+}
  body {
+
    padding-bottom: 40px;
    color: #5a5a5a;
  }
+.padd-t{
+padding-top: 100px;
+height: 600px
 
-
+ }
+ .foot{
+   background-color: black;
+   height: 150px;
+   margin-top: 20px;
+   padding-top: 20px;
+   border-radius: 5px;
+ }
+.navbar-inverse {
+    background-color: #e00d0d;
+    border-color: #090909;
+}
  /* CUSTOMIZE THE NAVBAR
  -------------------------------------------------- */
 
@@ -37,6 +77,7 @@
    right: 0;
    left: 0;
    z-index: 20;
+
  }
 
  /* Flip around the padding for proper display in narrow viewports */
@@ -59,7 +100,8 @@
  /* Carousel base class */
  .carousel {
    height: 500px;
-   margin-bottom: 60px;
+   /*margin-bottom: 60px;*/
+   background-color: black;
  }
  /* Since positioning the image, we need to help out the caption */
  .carousel-caption {
@@ -101,7 +143,7 @@
  ------------------------- */
 
  .featurette-divider {
-   margin: 80px 0; /* Space out the Bootstrap <hr> more */
+   margin: 40px 0; /* Space out the Bootstrap <hr> more */
  }
 
  /* Thin out the marketing headings */

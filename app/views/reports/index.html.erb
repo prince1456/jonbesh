@@ -1,0 +1,26 @@
+<div class="report-form">
+  <%= link_to 'New Report', new_report_path %>
+<p id="notice"><%= notice %></p>
+
+
+<h1>گزارشات</h1>
+<div class="row">
+  <h3><div class="col-md-4">عنوان گزارش</div></h3>
+<h3>  <div class="col-md-4">خلاصه گزارش</div></h3>
+  <h3><div class="col-md-4">متن کامل</div></h3>
+</div>
+<br>
+
+    <% @reports.each do |report| %>
+    <div class="row reports-in">
+    <!-- <div class="col-md-2">edit</div>
+    <div class="col-md-2">show</div> -->
+    <h4><div class="col-md-12"><%=link_to report.title, report_path(report.id) %></div></h4>
+    <hr>
+    <p><div class="col-md-12">  <%= report.body %></div></p>
+
+  </div>
+
+    <% end %>
+
+</div>

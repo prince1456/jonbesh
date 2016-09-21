@@ -1,3 +1,8 @@
 $brand-primary: red;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  background-image: image-url('cork-wallet.png')
+
+}

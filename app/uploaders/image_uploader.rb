@@ -62,7 +62,6 @@ private
 
 def watermark
    manipulate! do |img|
-
      img = img.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/large_1English.png"), "large") do |c|
        c.gravity "SouthEast"
      end

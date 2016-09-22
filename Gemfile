@@ -17,7 +17,6 @@ gem 'frontend-generators'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem "mini_magick"
 gem 'rmagick', '2.13.2'
-gem 'fog'
 
 # gem "paperclip", "~> 5.0.0"
 

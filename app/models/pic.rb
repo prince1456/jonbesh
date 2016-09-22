@@ -1,7 +1,7 @@
 class Pic < ApplicationRecord
 mount_uploader :image, ImageUploader
 
-
+validates :title, presence: true
   # has_attached_file :image,
   #                         styles: {
   #                             large: "600x600>",

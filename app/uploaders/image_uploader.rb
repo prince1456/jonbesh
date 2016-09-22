@@ -57,11 +57,34 @@ class ImageUploader < CarrierWave::Uploader::Base
 
 private
 
+
+
+
 def watermark
    manipulate! do |img|
+
      img = img.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/large_1English.png"), "large") do |c|
        c.gravity "SouthEast"
      end
+
+
+    #  watermark = MiniMagick::Image.open("#{Rails.root}/app/assets/images/large_1English.png")
+    #
+    #  draw = Magick::Draw.new
+    #
+    #  draw.annotate(watermark, 0, 0, 0, 0, "creative commons") do
+    #   # place the text in the centre of the canvas;
+    #   draw.gravity = Magick::CenterGravity;
+    #   # set text height in points where 1 point is 1/72 inches;
+    #   draw.pointsize = 100;
+    #   draw.font_family = "Times" # set font;
+    #   draw.fill = "white" # set text color;
+    #   draw.stroke = "none" # remove stroke;
+    # end
+    #
+    #  img = img.composite(watermark, "large") do |c|
+    #    c.gravity "SouthEast"
+    #  end
    end
  end
 

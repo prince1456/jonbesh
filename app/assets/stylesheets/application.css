@@ -15,6 +15,11 @@
  *= require_self
  */
 
+ .navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+    font-size: large;
+    font-weight: bolder;
+}
 
  hr.style-seven {
    border: 0;
@@ -70,7 +75,7 @@ height: auto;
    border-radius: 5px;
  }
 .navbar-inverse {
-    background-color: #e00d0d;
+    background-color: rgba(255, 153, 0, 0.24);
     border-color: #090909;
 }
  /* CUSTOMIZE THE NAVBAR

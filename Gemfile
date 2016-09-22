@@ -5,6 +5,7 @@ gem 'omniauth-facebook'
 gem "koala", "~> 2.2"
 gem "twitter"
 gem 'omniauth-twitter'
+
 gem 'simple_form'
 gem 'fog'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -15,6 +16,7 @@ gem 'frontend-generators'
 gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem "mini_magick"
 gem 'rmagick', '2.13.2'
+gem 'fog'
 
 # gem "paperclip", "~> 5.0.0"
 

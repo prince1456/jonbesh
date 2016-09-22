@@ -8,8 +8,7 @@
     <%= image_tag @pic.image.url(:large), class:"img-responsive img-rounded" %>
     <% end %></div>
   </div>
-  <form action="<%= @pic.image.url(:large) %>">
-    <input class="btn btn-default btn-lg"type="submit" value="Go to Google" />
-</form>
-<%# link_to 'Edit', edit_pic_path(@pic) %> 
+  <%= link_to "download", @pic.image.url(:large) %>
+
+<%# link_to 'Edit', edit_pic_path(@pic) %>
 <%= link_to 'Back', pics_path %>

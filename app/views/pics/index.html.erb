@@ -1,4 +1,4 @@
-
+<div class="report-form">
 <hr class="featurette-divider">
 
 <p id="notice"><%= notice %></p>
@@ -12,7 +12,7 @@
                 <%= image_tag pic.image.url(:large) %>
               </a>
               <div class="caption">
-                <p><%= pic.title %></p>
+                <%= pic.title %>
                 <!-- <p>...</p> -->
                 <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
                   <a href="#" class="btn btn-default" role="button">Button</a></p> -->
@@ -27,3 +27,4 @@
 
   </div>
   <div><%= paginate @pics %></div>
+</div>

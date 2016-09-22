@@ -6,13 +6,13 @@
 <h1>Pics</h1>
 <div class="row">
     <% @pics.each do |pic| %>
-          <div class="col-sm-4 col-md-2">
+          <div class="col-sm-6 col-md-3">
             <div class="thumbnail">
                <a href="pics/<%= pic.id%>" class="thumbnail">
                 <%= image_tag pic.image.url(:large) %>
               </a>
               <div class="caption">
-                <p><%= pic.title %></p>
+                <h3><%= pic.title %></h3>
                 <!-- <p>...</p> -->
                 <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
                   <a href="#" class="btn btn-default" role="button">Button</a></p> -->
@@ -24,8 +24,4 @@
         <td><%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
 
     <% end %>
-
-  </div
-  <div class="digg_pagination">
-  <%= paginate @pics %>
-</div>
+  </div>

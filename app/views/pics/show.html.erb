@@ -1,14 +1,24 @@
+<div class="report-form">
 <p id="notice"><%= notice %></p>
 
   <div class="row">
 
-    <div class="col-xs-6 col-md-4">   <strong>Title:</strong> <%= @pic.title %></div>
+    <div class="col-xs-6 col-md-4">   <h3><strong>عکس انگلیسی</strong></h3> <%= @pic.title %></div>
     <div class="col-xs-12 col-md-8"><% if @pic.image.present? %>
-    <strong>Image:</strong>
+    <strong>عگس:</strong>
     <%= image_tag @pic.image.url(:large), class:"img-responsive img-rounded" %>
     <% end %></div>
   </div>
-  <%= link_to "download", @pic.image.url(:large) %>
+  <div class="row">
+
+    <div class="col-xs-6 col-md-4">  <h3> <strong>عکس فارسی  </strong></h3> <%= @pic.title %></div>
+    <div class="col-xs-12 col-md-8"><% if @pic.image.present? %>
+    <strong>عگس:</strong>
+    <%= image_tag @pic.image.url(:fa), class:"img-responsive img-rounded" %>
+    <% end %></div>
+  </div>
+  <%= link_to "download", @pic.image.url(:fa) %>
 
 <%# link_to 'Edit', edit_pic_path(@pic) %>
 <%= link_to 'Back', pics_path %>
+</div>

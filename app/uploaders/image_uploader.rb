@@ -45,6 +45,12 @@ class ImageUploader < CarrierWave::Uploader::Base
     process :watermark
     process :optimize_image
   end
+  version :fa do
+    process resize_to_fit: [600, 600]
+    process resize_to_fill: [600,600]
+    process :watermark2
+    process :optimize_image
+  end
     # process :resize_to_fill => [600, 600]
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -63,6 +69,13 @@ private
 def watermark
    manipulate! do |img|
      img = img.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/large_1English.png"), "large") do |c|
+       c.gravity "SouthEast"
+     end
+   end
+ end
+def watermark2
+   manipulate! do |img|
+     img = img.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/framFa.png"), "large") do |c|
        c.gravity "SouthEast"
      end
 

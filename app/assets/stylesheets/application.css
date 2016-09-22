@@ -14,7 +14,17 @@
  *= require_tree .
  *= require_self
  */
+ .thumbnail .caption {
+    padding: 9px;
+    color: #333;
+    height: 49px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
 
+.thumbnail {
+    margin-bottom: 4px;
+}
  .navbar-inverse .navbar-nav>li>a {
     color: #fff;
     font-size: large;

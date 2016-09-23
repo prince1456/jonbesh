@@ -2,8 +2,11 @@
 <hr class="featurette-divider">
 
 <p id="notice"><%= notice %></p>
-
-<h1>Pics</h1>
+<div class="text-center">
+<h3>به زودی امکانات دیگری برای این وب سایت اضافه خواهد شد برای اپلود عکس از لینک زیر استفاده کنید </h3>
+<%= link_to "آپلود عکس", new_pic_path, class: "btn btn-default"  %>
+</div>
+<br>
 <div class="row">
     <% @pics.each do |pic| %>
     <% if pic.image.present? %>

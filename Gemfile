@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'kaminari'
 gem 'cancancan', '~> 1.10'
+
 gem 'omniauth-facebook'
 gem "koala", "~> 2.2"
 gem "twitter"

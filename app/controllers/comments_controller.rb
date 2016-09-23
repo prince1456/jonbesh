@@ -3,22 +3,23 @@ class CommentsController < ApplicationController
     @comment = Comment.new find_params
     @report = Report.find params[:report_id]
     @comment.report = @report
-    # respond_to do |format|
+    respond_to do |format|
         if @comment.save
-            flash[:notice] = 'successfully Added'
-             redirect_to report_path(@report)
-            # format.js { render :create_success}
+             flash[:notice] = 'successfully Added'
+             format.html {redirect_to report_path(@report)}
+             format.js { render :create_success}
         else
             flash[:notice] = 'Fixed the errors'
-          render '/reports/show'
-            # format.js { render :create_failure }
+            format.html {render '/reports/show'}
+            format.js { render :create_failure }
         end
-
+    end
   end
+
   def update
-
-
   end
+
+
 private
   def find_params
     params.require(:comment).permit(:name, :body)

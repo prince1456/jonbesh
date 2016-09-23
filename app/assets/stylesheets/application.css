@@ -14,7 +14,28 @@
  *= require_tree .
  *= require_self
  */
+ .thumbnail .caption {
+    padding: 9px;
+    color: #333;
+    height: 49px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
 
+.thumbnail {
+    margin-bottom: 4px;
+}
+ .navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+    font-size: large;
+    font-weight: bolder;
+}
+
+ hr.style-seven {
+   border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+ }
 
 
 /*form */
@@ -52,19 +73,20 @@ background: rgba(255, 255, 255, 0.51)
    color: #5a5a5a;
  }
 .padd-t{
-padding-top: 100px;
-height: 600px
+padding-top: 240px;
+height: auto;
 
  }
  .foot{
+
    background-color: black;
    height: 150px;
    margin-top: 20px;
-   padding-top: 20px;
+   padding-top: 250px;
    border-radius: 5px;
  }
 .navbar-inverse {
-    background-color: #e00d0d;
+    background-color: rgba(255, 153, 0, 0.24);
     border-color: #090909;
 }
  /* CUSTOMIZE THE NAVBAR
@@ -102,6 +124,9 @@ height: 600px
    height: 500px;
    /*margin-bottom: 60px;*/
    background-color: black;
+   @media only screen and (max-width: 768px){
+     height: 200px;
+   }
  }
  /* Since positioning the image, we need to help out the caption */
  .carousel-caption {
@@ -112,13 +137,27 @@ height: 600px
  .carousel .item {
    height: 500px;
    background-color: #777;
+
  }
+
+
  .carousel-inner > .item > img {
    position: absolute;
    top: 0;
    left: 0;
    min-width: 100%;
    height: 500px;
+
+ }
+
+
+ @media only screen and (max-width: 768px){
+
+   .carousel, .carousel .item, .carousel-inner > .item > img {
+     height: 200px;
+
+   }
+
  }
 
 
@@ -193,3 +232,65 @@ height: 600px
      margin-top: 120px;
    }
  }
+/*/comment*/
+
+
+.tip {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  background: transparent;
+  border: 10px solid #ccc;
+}
+
+.tip-up {
+  top: -25px; /* Same as body margin top + border */
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.tip-down {
+  bottom: -25px;
+  left: 10px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tip-left {
+  top: 10px;
+  left: -25px;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tip-right {
+  top: 10px;
+  right: -25px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.dialogbox .body {
+  position: relative;
+  max-width: auto;
+  height: auto;
+  margin: 20px 40px;
+  padding: 5px;
+  background-color: #DADADA;
+  border-radius: 3px;
+  border: 5px solid #ccc;
+}
+
+.body .message {
+  min-height: 30px;
+  border-radius: 3px;
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #797979;
+}

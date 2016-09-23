@@ -50,6 +50,7 @@ GEM
     buftok (0.2.0)
     builder (3.2.2)
     byebug (9.0.5)
+    cancancan (1.15.0)
     carrierwave (1.0.0.beta)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -230,6 +231,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     jwt (1.5.6)
+    kaminari (0.17.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     koala (2.4.0)
       addressable
       faraday
@@ -385,6 +389,7 @@ DEPENDENCIES
   awesome_print
   bootstrap-sass (~> 3.3.6)
   byebug
+  cancancan (~> 1.10)
   carrierwave (>= 1.0.0.beta, < 2.0)
   coffee-rails (~> 4.2)
   fog
@@ -393,6 +398,7 @@ DEPENDENCIES
   interactive_editor
   jbuilder (~> 2.5)
   jquery-rails
+  kaminari
   koala (~> 2.2)
   listen (~> 3.0.5)
   mini_magick

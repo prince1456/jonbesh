@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
-
+gem 'kaminari'
+gem 'cancancan', '~> 1.10'
 gem 'omniauth-facebook'
 gem "koala", "~> 2.2"
 gem "twitter"
 gem 'omniauth-twitter'
+
 gem 'simple_form'
 gem 'fog'
 gem 'bootstrap-sass', '~> 3.3.6'

@@ -3,7 +3,7 @@
   <head>
     <title>Jonbesh</title>
     <%= csrf_meta_tags %>
-
+  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -13,7 +13,7 @@
 
   <div class="navbar-wrapper">
      <div class="container">
-     <div class="navbb">
+
 
        <nav class="navbar navbar-inverse navbar-static-top">
          <div class="container">
@@ -30,8 +30,8 @@
            </div>
            <div id="navbar" class="navbar-collapse collapse">
              <ul class="nav navbar-nav navbar-right navbar-center">
-               <li class="active"><%= link_to "Home", root_path %></li>
-               <li><%= link_to "upload photo", new_pic_path %></li>
+               <li class="active"><%= link_to "خانه", root_path %></li>
+               <li><%= link_to "آپلود عکس", new_pic_path %></li>
                <li><%= link_to "کزارشات", reports_path %></li>
                <li><%= link_to "ثبت گزارش جدید", new_report_path %></li>
                <!-- <li><a href="#contact">Contact</a></li> -->
@@ -52,7 +52,7 @@
          </div>
        </nav>
 
-       </div>
+
      </div>
    </div>
 

@@ -1,6 +1,8 @@
 class Pic < ApplicationRecord
 mount_uploader :image, ImageUploader
+belongs_to :user
 
+    after_create :to_facebook
 validates :title, presence: true
   # has_attached_file :image,
   #                         styles: {
@@ -18,4 +20,11 @@ validates :title, presence: true
   #   ImageClipper::Image.new(avatar.path(:original)).watermarking(watermark_path, options)
   #   update_attribute(:avatar, avatar)
   # end
+  def to_facebook
+    if self.Post_on_facebook == true
+      self.user.facebook.put_wall_post("hey checkout this: #{self.title}")
+      # User.last.facebook.put_picture(self.image.path)
+    end
+  end
+
 end

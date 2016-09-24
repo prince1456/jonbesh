@@ -1,10 +1,12 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_use!, only: [:edit, :destroy, :update]
     layout "layouts/new", only: [:new, :show]
 
   # GET /pics
   # GET /pics.json
   def index
+    byebug
     @pics = Pic.all.order(created_at: :DESC).page(params[:page]).per(30)
    end
 
@@ -24,9 +26,10 @@ class PicsController < ApplicationController
 
   # POST /pics
   # POST /pics.json
+
   def create
     @pic = Pic.new(pic_params)
-
+    @pic.user = current_user if pic_params[:Post_on_facebook] == 'true'
     respond_to do |format|
       if @pic.save
         format.html { redirect_to @pic, notice: 'Pic was successfully created.' }
@@ -70,6 +73,6 @@ class PicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pic_params
-      params.require(:pic).permit(:title, :image)
+      params.require(:pic).permit(:title, :image, :Post_on_facebook)
     end
 end

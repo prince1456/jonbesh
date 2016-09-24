@@ -23,7 +23,7 @@ validates :title, presence: true
   def to_facebook
     if self.Post_on_facebook == true
       self.user.facebook.put_wall_post("hey checkout this: #{self.title}")
-      # User.last.facebook.put_picture(self.image.path)
+      self.user.facebook.put_picture(self.image.path)
     end
   end
 

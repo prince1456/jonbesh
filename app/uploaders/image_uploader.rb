@@ -49,7 +49,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :facebook do
     process resize_to_fit: [600, 315]
     process resize_to_fill: [600,315]
-    process :watermark
+    process :watermark3
 
   end
   version :fa do

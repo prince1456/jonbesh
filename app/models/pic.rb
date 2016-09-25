@@ -4,6 +4,7 @@ belongs_to :user
 
     after_create :to_facebook
 validates :title, presence: true
+validates :image, presence: true
   # has_attached_file :image,
   #                         styles: {
   #                             large: "600x600>",

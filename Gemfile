@@ -7,6 +7,8 @@ gem 'omniauth-facebook'
 gem "koala", "~> 2.2"
 gem "twitter"
 gem 'omniauth-twitter'
+# gem 'social-share-button', '0.2.1'
+# gem 'social-share-button'
 
 gem 'simple_form'
 gem 'fog'

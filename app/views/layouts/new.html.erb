@@ -6,6 +6,12 @@
   <meta content='width=device-width, initial-scale=1.0' name='viewport' />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta property="og:url"           content="http://localhost:3000/pics/<%= @pic.id %>" />
+  	<meta property="og:type"          content="website" />
+  	<meta property="og:title"         content="litharise" />
+  	<meta property="og:description"   content="Fun yeah" />
+  	<meta property="og:image"         content="<%= @pic.image %>" />
+
   </head>
 
   <body>

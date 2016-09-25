@@ -1,6 +1,6 @@
 class ReportsController < ApplicationController
   before_action :set_report, only: [:show, :edit, :update, :destroy]
-    layout "layouts/new", only: [:new, :show, :index]
+    layout "layouts/other", only: [:new, :show, :index]
   # GET /reports
   # GET /reports.json
   def index
@@ -12,7 +12,7 @@ class ReportsController < ApplicationController
   def show
     @report = Report.find params[:id]
     @comment = Comment.new
-    
+
   end
 
   # GET /reports/new

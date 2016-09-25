@@ -1,7 +1,8 @@
 class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_use!, only: [:edit, :destroy, :update]
-    layout "layouts/new", only: [:new, :show]
+    layout "layouts/new", only: [:show]
+    layout "layouts/other", only: [:new]
 
   # GET /pics
   # GET /pics.json

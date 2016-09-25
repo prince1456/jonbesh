@@ -39,17 +39,24 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
+
   version :large do
     process resize_to_fit: [600, 600]
     process resize_to_fill: [600,600]
     process :watermark
-    process :optimize_image
+    # process :optimize_image
+  end
+  version :facebook do
+    process resize_to_fit: [600, 315]
+    process resize_to_fill: [600,315]
+    process :watermark
+
   end
   version :fa do
     process resize_to_fit: [600, 600]
     process resize_to_fill: [600,600]
     process :watermark2
-    process :optimize_image
+    # process :optimize_image
   end
     # process :resize_to_fill => [600, 600]
 
@@ -73,6 +80,15 @@ def watermark
      end
    end
  end
+
+def watermark3
+   manipulate! do |img|
+     img = img.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/facebook.png"), "large") do |c|
+       c.gravity "SouthEast"
+     end
+   end
+ end
+
 def watermark2
    manipulate! do |img|
      img = img.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/framFa.png"), "large") do |c|

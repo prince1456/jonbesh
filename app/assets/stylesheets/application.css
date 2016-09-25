@@ -73,16 +73,14 @@ background: rgba(255, 255, 255, 0.51)
    color: #5a5a5a;
  }
 .padd-t{
-padding-top: 240px;
+padding-top: 100px;
 height: auto;
 
  }
  .foot{
-
    background-color: black;
    height: 150px;
-   margin-top: 20px;
-   padding-top: 250px;
+   /*padding-top: 250px;*/
    border-radius: 5px;
  }
 .navbar-inverse {
@@ -100,6 +98,10 @@ height: auto;
    left: 0;
    z-index: 20;
 
+ }
+ .text-center{
+   font-family: "Verdona", Aria, Serif;
+   font-size: 20px;
  }
 
  /* Flip around the padding for proper display in narrow viewports */

@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jonbesh</title>
-    <%= csrf_meta_tags %>
-      <meta content='width=device-width, initial-scale=1.0' name='viewport' />
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <head>
+        <title>Jonbesh</title>
+        <%= csrf_meta_tags %>
+        <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+        <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> -->
+    <body>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> -->
 
+        <div class="navbar-wrapper">
+            <div class="container">
 
-    <div class="navbar-wrapper">
-       <div class="container">
+                <nav class="navbar navbar-inverse navbar-static-top">
+                    <div class="container">
 
-
-         <nav class="navbar navbar-inverse navbar-static-top">
-           <div class="container">
-
-
-             <div class="navbar-header navbar-right">
-               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                 <span class="sr-only">Toggle navigation</span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-                 <span class="icon-bar"></span>
-               </button>
-               <a class="navbar-brand navbar-right" href="/">جنبش روشنایی</a>
-             </div>
-             <div id="navbar" class="navbar-collapse collapse">
-               <ul class="nav navbar-nav navbar-right navbar-center">
-                 <li class="active"><%= link_to "خانه", root_path %></li>
-                 <li><%= link_to "آپلود عکس", new_pic_path %></li>
-                 <li><%= link_to "کزارشات", reports_path %></li>
-                 <li><%= link_to "ثبت گزارش جدید", new_report_path %></li>
-                 <!-- <li><a href="#contact">Contact</a></li> -->
-                 <!-- <li class="dropdown">
+                        <div class="navbar-header navbar-right">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand navbar-right" href="/">جنبش روشنایی</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right navbar-center">
+                                <li class="active"><%= link_to "خانه", root_path %></li>
+                                <li><%= link_to "آپلود عکس", new_pic_path %></li>
+                                <li><%= link_to "کزارشات", reports_path %></li>
+                                <li><%= link_to "ثبت گزارش جدید", new_report_path %></li>
+                                <!-- <li><a href="#contact">Contact</a></li> -->
+                                <!-- <li class="dropdown">
                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                    <ul class="dropdown-menu">
                      <li><a href="#">Action</a></li>
@@ -49,69 +46,106 @@
                      <li><a href="#">One more separated link</a></li>
                    </ul>
                  </li> -->
-               </ul>
-             </div>
-           </div>
-         </nav>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
 
+            </div>
+        </div>
 
-       </div>
-     </div>
-
-   <!-- Carousel
+        <!-- Carousel
      ================================================== -->
-     <div id="myCarousel" class="carousel slide bg23" data-ride="carousel">
-       <!-- Indicators -->
-       <ol class="carousel-indicators">
-         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-         <li data-target="#myCarousel" data-slide-to="1"></li>
-         <li data-target="#myCarousel" data-slide-to="2"></li>
-       </ol>
-       <div class="carousel-inner" role="listbox">
-         <div class="item active">
-           <%= image_tag "banner.jpg", class: "first-slide" %>
-           <!-- <img class="first-slide" src="assets/banner.jpg" alt="First slide"> -->
-           <div class="container">
-             <div class="carousel-caption">
-               <h1>جنبش روشنایی</h1>
-               <p>...</p>
+        <div id="myCarousel" class="carousel slide bg23" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <%= image_tag "banner.jpg", class: "first-slide" %>
+                    <!-- <img class="first-slide" src="assets/banner.jpg" alt="First slide"> -->
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>جنبش روشنایی</h1>
+                            <p>...</p>
 
-             </div>
-           </div>
-         </div>
-         <div class="item">
-            <%= image_tag "banner3.jpg", class: "first-slide" %>
-           <div class="container">
-             <div class="carousel-caption">
-               <h1>نمونه</h1>
-               <p>...</p>
-               <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
-             </div>
-           </div>
-         </div>
-       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-         <span class="sr-only">Previous</span>
-       </a>
-       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-         <span class="sr-only">Next</span>
-       </a>
-     </div><!-- /.carousel -->
-  </div>
-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <%= image_tag "banner3.jpg", class: "first-slide" %>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>نمونه</h1>
+                            <p>...</p>
+                            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- /.carousel -->
+        </div>
+    </div>
+<br>
+    <div class="container">
+        <div class="text-center">
+            <%  if user_signed_in? %>
+            <%= image_tag current_user.awatar %>
+            <%= current_user.full_name %>
+            <%= link_to "logout", sessions_path, method: :delete, class: "btn btn-default btn-sm",
+                                data: {confirm: "are you sure you want to log out?"}%>
+        <% else %>
 
-<div class="container">
+            <!-- <%# link_to 'sign up', new_user_path%>
 
-    <%= yield %>
-</div>
+            <%# link_to 'Sign In', new_session_path %> -->
 
-<footer class="foot">
-      <p class="pull-left"><a href="#">Back to top</a></p>
-      <p class="pull-right">این وب سایت متعلق به هواداران جنبش روشنایی میباشد <a href="#">jonbesh.com</a></p>
+            <%= link_to "sign in with twitter", sign_in_with_twitter_path, class: "btn btn-default btn-sm"%>
+            |
+            <%= link_to "sing in with facebook", sign_in_with_facebook_path, class: "btn btn-default btn-sm" %>
+            <% end %>
+        </div>
+        <%= yield %>
+    </div>
+
+    <footer class="foot">
+        <p class="pull-left">
+            <a href="#">Back to top</a>
+        </p>
+        <p class="pull-right">این وب سایت متعلق به هواداران جنبش روشنایی میباشد
+            <a href="#">jonbesh.com</a>
+        </p>
     </footer>
 </div>
 
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        },
+        i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-  </body>
+    ga('create', 'UA-70629332-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</body>
 </html>

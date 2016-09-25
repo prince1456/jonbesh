@@ -2,10 +2,13 @@ source 'https://rubygems.org'
 
 gem 'kaminari'
 gem 'cancancan', '~> 1.10'
+
 gem 'omniauth-facebook'
 gem "koala", "~> 2.2"
 gem "twitter"
 gem 'omniauth-twitter'
+# gem 'social-share-button', '0.2.1'
+# gem 'social-share-button'
 
 gem 'simple_form'
 gem 'fog'
@@ -44,7 +47,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

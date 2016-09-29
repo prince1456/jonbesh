@@ -2,8 +2,10 @@ class PicsController < ApplicationController
   before_action :set_pic, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_use!, only: [:edit, :destroy, :update]
     layout "layouts/application", only: [:index, :create,:edit]
-    layout "layouts/new", only: [:show]
+
     layout "layouts/other", only: [:new]
+
+    layout "layouts/new", only: [:show]
 
 
   # GET /pics

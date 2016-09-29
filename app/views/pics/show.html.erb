@@ -1,32 +1,50 @@
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1276464935708785";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+    (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1276464935708785";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 <div class="report-form">
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-  <div class="row">
+    <div class="row">
 
-    <div class="col-xs-6 col-md-4">   <h3><strong>عکس انگلیسی</strong></h3> <%= @pic.title %></div>
-    <div class="col-xs-12 col-md-8"><% if @pic.image.present? %>
-    <strong>عگس:</strong>
-    <%= image_tag @pic.image.url(:large), class:"img-responsive img-rounded" %>
-    <% end %></div>
-  </div>
-  <div class="row">
+        <div class="col-xs-6 col-md-4">
+            <h3>
+                <strong>English Version</strong>
+            </h3>
+            <%= @pic.title %></div>
+        <div class="col-xs-12 col-md-8"><% if @pic.image.present? %>
+            <strong>Picture:
+            </strong>
+            <%= image_tag @pic.image.url(:large), class:"img-responsive img-rounded" %>
+            <% end %></div>
+    </div>
+    <div class="row">
 
-    <div class="col-xs-6 col-md-4">  <h3> <strong>عکس فارسی  </strong></h3> <%= @pic.title %></div>
-    <div class="col-xs-12 col-md-8"><% if @pic.image.present? %>
-    <strong>عگس:</strong>
-    <%= image_tag @pic.image.url(:fa), class:"img-responsive img-rounded" %>
-    <% end %></div>
-  </div>
-  <%= link_to "download", @pic.image.url(:fa) %>
-    <div class="fb-share-button" data-href="http://jonbesh-rosh.herokuapp.com/pics/<% @pic.id%>" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjonbesh-rosh.herokuapp.com%2Fpics%2F<%= @pic.id %>&amp;src=sdkpreparse">Share</a></div>
-  <%= link_to 'Back', pics_path %>
+        <div class="col-xs-6 col-md-4">
+            <h3>
+                <strong>Persian Photo
+                </strong>
+            </h3>
+            <%= @pic.title %></div>
+        <div class="col-xs-12 col-md-8"><% if @pic.image.present? %>
+            <strong>Picture:
+            </strong>
+            <%= image_tag @pic.image.url(:fa), class:"img-responsive img-rounded" %>
+            <% end %></div>
+    </div>
+    <%= link_to "download", @pic.image.url(:fa) %>
+    <div class="fb-share-button" data-href="http://jonbesh-rosh.herokuapp.com/pics/<% @pic.id%>" data-layout="button_count" data-size="large" data-mobile-iframe="true">
+        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjonbesh-rosh.herokuapp.com%2Fpics%2F<%= @pic.id %>&amp;src=sdkpreparse">Share on facebook</a>
+    </div>
+    <%= link_to 'Back', pics_path %>
 </div>

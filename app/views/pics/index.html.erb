@@ -1,50 +1,54 @@
 <div class="report-form">
-<hr class="featurette-divider">
+    <hr class="featurette-divider">
 
-<p id="notice"><%= notice %></p>
-<div class="text-center">
-<h3>به زودی امکانات دیگری برای این وب سایت اضافه خواهد شد برای اپلود عکس از لینک زیر استفاده کنید </h3>
-<h4>هم اکنون میتوانید بعد از اپلود عکستان ان را به طور مستقیم در فیس بوک به اشتراک بگزارید </h4>
-<%= link_to "آپلود عکس", new_pic_path, class: "btn btn-default"  %>
-</div>
-<br>
-<div class="row">
-    <% @pics.each do |pic| %>
-    <% if pic.image.present? %>
-          <div class="col-sm-4 col-md-2 col-xs-6">
-            <div class="thumbnail">
-               <a href="pics/<%= pic.id%>" class="thumbnail">
-                <%= image_tag pic.image.url(:large) %>
-              </a>
-              <div class="caption">
-                <%= pic.title %>
-                <!-- <p>...</p> -->
-                <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
-                  <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-              </div>
+    <p id="notice"><%= notice %></p>
+    <div class="text-center">
+        <h3>Some new feature will added in this app please check it again!
+        </h3>
+        <h4>You can Share your photo directly with our app
+        </h4>
+        <%= link_to "Upload Picture", new_pic_path, class: "btn btn-default"  %>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-8">
+            <% @pics.each do |pic| %>
+            <% if pic.image.present? %>
+            <div class="col-sm-4 col-md-3 col-xs-6">
+                <div class="thumbnail">
+                    <a href="pics/<%= pic.id%>" class="thumbnail">
+                        <%= image_tag pic.image.url(:large) %>
+                    </a>
+                    <div class="caption">
+                        <%= pic.title %>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- <td><%= link_to 'Show', pic %></td>
-        <td><%= link_to 'Edit', edit_pic_path(pic) %></td>
-        <td><%= link_to 'Destroy', pic, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-    <% else  %>
-      <div class="col-sm-4 col-md-2 col-xs-6">
-        <div class="thumbnail">
-           <a href="pics/<%= pic.id%>" class="thumbnail">
-            <img src="http://s6.picofile.com/file/8253079842/behzad1.jpg?w=400">
-          </a>
-          <div class="caption">
-            <%= pic.title %>
-            <!-- <p>...</p> -->
-            <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a>
-              <a href="#" class="btn btn-default" role="button">Button</a></p> -->
-          </div>
+
+        <% else  %>
+            <div class="col-sm-4 col-md-3 col-xs-6">
+                <div class="thumbnail">
+                    <a href="pics/<%= pic.id%>" class="thumbnail">
+                        <img src="http://s6.picofile.com/file/8253079842/behzad1.jpg">
+                    </a>
+                    <div class="caption">
+                        <%= pic.title %>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+
+            <% end %>
         </div>
-      </div>
-    <% end %>
 
-    <% end %>
+        <div class="col-md-4">
+            <div class="fb-page" data-href="https://www.facebook.com/theenlighteningmovement/?__mref=message_bubble" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/theenlighteningmovement/?__mref=message_bubble" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/theenlighteningmovement/?__mref=message_bubble">‎Light Arise</a>
+                </blockquote>
+            </div>
+        </div>
+    </div>
 
-  </div>
-  <div><%= paginate @pics %></div>
+    <div><%= paginate @pics %></div>
 </div>

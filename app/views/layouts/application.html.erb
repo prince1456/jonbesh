@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jonbesh</title>
+        <title>Light Arise</title>
         <%= csrf_meta_tags %>
         <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
         <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/>
@@ -10,8 +10,14 @@
     </head>
 
     <body>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> -->
-
+      <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=1541756769448521";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
         <div class="navbar-wrapper">
             <div class="container">
 
@@ -25,27 +31,14 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand navbar-right" href="/">جنبش روشنایی</a>
+                            <a class="navbar-brand navbar-right" href="/">Light Arise</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right navbar-center">
-                                <li class="active"><%= link_to "خانه", root_path %></li>
-                                <li><%= link_to "آپلود عکس", new_pic_path %></li>
-                                <li><%= link_to "کزارشات", reports_path %></li>
-                                <li><%= link_to "ثبت گزارش جدید", new_report_path %></li>
-                                <!-- <li><a href="#contact">Contact</a></li> -->
-                                <!-- <li class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                   <ul class="dropdown-menu">
-                     <li><a href="#">Action</a></li>
-                     <li><a href="#">Another action</a></li>
-                     <li><a href="#">Something else here</a></li>
-                     <li role="separator" class="divider"></li>
-                     <li class="dropdown-header">Nav header</li>
-                     <li><a href="#">Separated link</a></li>
-                     <li><a href="#">One more separated link</a></li>
-                   </ul>
-                 </li> -->
+                                <li class="active"><%= link_to "Home", root_path %></li>
+                                <li><%= link_to "Upload Picture", new_pic_path %></li>
+                                <li><%= link_to "Reports", reports_path %></li>
+                                <li><%= link_to "New Reports", new_report_path %></li>
                             </ul>
                         </div>
                     </div>
@@ -66,11 +59,10 @@
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <%= image_tag "banner.jpg", class: "first-slide" %>
-                    <!-- <img class="first-slide" src="assets/banner.jpg" alt="First slide"> -->
                     <div class="container">
                         <div class="carousel-caption text-center">
-                            <h1>جنبش روشنایی</h1>
-                            <p class="captioncrousal">با جستجوی کلمه light Arise در گوگل پلی استور اپلیکیشن ما را دانلود کنید.</p>
+                            <h1>Light Arise</h1>
+                            <p class="captioncrousal">Search Light Arise to find our our app in google play store</p>
 
                         </div>
                     </div>
@@ -79,9 +71,8 @@
                     <%= image_tag "banner3.jpg", class: "first-slide" %>
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1>نمونه</h1>
+                            <h1>Light Arise</h1>
                             <p>...</p>
-                            <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
                         </div>
                     </div>
                 </div>
@@ -106,11 +97,6 @@
             <%= link_to "logout", sessions_path, method: :delete, class: "btn btn-default btn-sm",
                                 data: {confirm: "are you sure you want to log out?"}%>
         <% else %>
-
-            <!-- <%# link_to 'sign up', new_user_path%>
-
-            <%# link_to 'Sign In', new_session_path %> -->
-
             <%= link_to "sign in with twitter", sign_in_with_twitter_path, class: "btn btn-default btn-sm"%>
             |
             <%= link_to "sing in with facebook", sign_in_with_facebook_path, class: "btn btn-default btn-sm" %>
@@ -118,12 +104,11 @@
         </div>
         <%= yield %>
     </div>
-
     <footer class="foot">
         <p class="pull-left">
             <a href="#">Back to top</a>
         </p>
-        <p class="pull-right">این وبسایت متعلق به هواداران جنبش روشنایی میباشد  طراحی و دیزاین علی اکبر علیزاده
+        <p class="pull-right">Designed by Ali Akbar Alizada
             <a href="http://lightarise.com">lightarise.com</a>
         </p>
     </footer>

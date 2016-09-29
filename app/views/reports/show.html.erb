@@ -2,8 +2,6 @@
     <p id="notice"><%= notice %></p>
 
     <div class="row reports-in">
-        <!-- <div class="col-md-2">edit</div>
-  <div class="col-md-2">show</div> -->
         <h4>
             <div class="col-md-12"><%= @report.title %></div>
         </h4>
@@ -11,19 +9,16 @@
         <p>
             <div class="col-md-12">
                 <%= @report.body %>
-                
             </div>
         </p>
-
     </div>
-
     <div class="row reports-in">
-      <div id="comments">
-        <% @report.comments.each do |f| %>
-        <%= render "/comments/comment", comment: f %>
-        <% end %>
+        <div id="comments">
+            <% @report.comments.each do |f| %>
+            <%= render "/comments/comment", comment: f %>
+            <% end %>
+        </div>
     </div>
-  </div>
 
     <div class="row reports-in">
         <div class="continer">
